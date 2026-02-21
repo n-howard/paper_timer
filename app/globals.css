@@ -1,3 +1,25 @@
 @import "tailwindcss";
 
+@theme {
+    --animate-flip-top: fliptop 0.8s linear;
 
+    --animate-flip-bottom: flipbottom 0.8s linear;
+    
+    @keyframes fliptop {
+        0% {
+            transform: rotateX(0deg);
+        }
+        50%, 100% {
+            transform: rotateX(-90deg);
+        }
+    }
+
+    @keyframes flipbottom {
+        0%, 50% {
+            transform: rotateX(90deg);
+        }
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+}
