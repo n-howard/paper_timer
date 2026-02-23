@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Patrick_Hand } from "next/font/google";
+import { Patrick_Hand , Karla } from "next/font/google";
 import "./globals.css";
 
 const patrickHand = Patrick_Hand({
@@ -7,6 +7,12 @@ const patrickHand = Patrick_Hand({
   subsets: ["latin"],
   weight: '400',
 });
+
+const karla = Karla({
+  variable: "--font-karla",
+  subsets: ["latin"],
+  weight: '400'
+})
 
 export const metadata: Metadata = {
   title: "Paper Time",
@@ -21,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${patrickHand.variable} antialiased`}
+        className={`${patrickHand.variable} ${karla.variable} antialiased`}
       >
         {children}
       </body>
